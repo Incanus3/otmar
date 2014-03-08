@@ -1,0 +1,6 @@
+# Logfile created on 2014-02-25 16:35:22 +0100 by logger.rb/44203
+I, [2014-02-25T16:35:22.021108 #2321]  INFO -- : 0:  safe_yaml (1.0.1) from /home/jakub/.rvm/gems/ruby-2.1.0@otmar/specifications/safe_yaml-1.0.1.gemspec
+I, [2014-02-25T16:35:31.505074 #2321]  INFO -- : 0:  crack (0.4.2) from /home/jakub/.rvm/gems/ruby-2.1.0@otmar/specifications/crack-0.4.2.gemspec
+I, [2014-02-25T16:35:31.505578 #2321]  INFO -- : 0:  bundler (1.5.1) from /home/jakub/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
+I, [2014-02-25T16:43:59.798449 #5666]  INFO -- : 0:  xml-simple (1.1.3) from /home/jakub/.rvm/gems/ruby-2.1.0@otmar/specifications/xml-simple-1.1.3.gemspec
+I, [2014-02-25T16:43:59.799195 #5666]  INFO -- : 0:  bundler (1.5.1) from /home/jakub/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
