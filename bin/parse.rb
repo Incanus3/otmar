@@ -3,12 +3,7 @@
 require 'csv'
 require 'xmlsimple'
 
-file = ARGV[0] || 'input.xml'
-output = ARGV[1] || 'output.csv'
-
-patients = XmlSimple.xml_in(file, 'KeyAttr' => 'id_pac')['is'][0]['ip']
-
-CSV.open(output,'wb', external_encoding: 'cp1250') do |csv|
+def export(patients,csv)
   csv << %w{rodcis jmeno prijmeni sex dat_nar kodpoj text}
 
   patients.each do |k,v|
@@ -33,4 +28,16 @@ CSV.open(output,'wb', external_encoding: 'cp1250') do |csv|
 
     csv << out
   end
+end
+
+if __FILE__ == $0
+  file = ARGV[0] || 'input.xml'
+  output = ARGV[1] || 'output.csv'
+  
+  patients = XmlSimple.xml_in(file, 'KeyAttr' => 'id_pac')['is'][0]['ip']
+
+  CSV.open('win1250-' + output,'wb',
+           external_encoding: 'cp1250') { |csv| export(patients,csv) }
+  
+  CSV.open('utf8-' + output,'wb') { |csv| export(patients,csv) }
 end
